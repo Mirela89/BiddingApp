@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bidding Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.6.1/ethers.umd.min.js"></script>
+    <script type="module" src="auction.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background: #1e1e1e;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+        }
+        h1, h2 {
+            color: #ffffff;
+        }
+        button {
+            background-color: #1e88e5;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #1565c0;
+        }
+        input {
+            padding: 5px;
+            margin: 10px 0;
+            background: #333;
+            color: white;
+            border: 1px solid #444;
+            border-radius: 5px;
+        }
+        p {
+            font-size: 14px;
+            color: #cccccc;
+        }
+        hr {
+            margin: 20px 0;
+            border: 0;
+            height: 1px;
+            background: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bidding Dashboard</h1>
+        <button id="connect">Connect to MetaMask</button>
+        <p id="account">Account: Not connected</p>
+        <p id="balance">Balance: Not connected</p>
+        <hr>
+
+        <h2>Auction Controls</h2>
+        <input type="number" id="duration" placeholder="Enter duration (seconds)">
+        <button id="startAuction">Start Auction</button>
+        <button id="endAuction">End Auction</button>
+        <hr>
+
+        <h2>Bid Actions</h2>
+        <input type="number" id="bidAmount" placeholder="Enter bid amount (ETH)">
+        <button id="placeBid">Place Bid</button>
+        <button id="withdrawBid">Withdraw Bid</button>
+        <hr>
+
+        <h2>Auction Status</h2>
+        <p id="highestBid">Highest Bid: </p>
+        <p id="highestBidder">Highest Bidder: </p>
+        <p id="auctionStatus">Auction Active: </p>
+        <!-- <p id="gasEstimate">Estimated Gas: --</p> -->
+    </div>
+</body>
+</html>
