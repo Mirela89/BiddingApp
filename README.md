@@ -14,4 +14,5 @@ A blockchain-powered auction system built with Solidity, the programming languag
 
 ## Screenshots
 ### Home Page
+![Homepage](screenshots/homepage.png)
 ### Bidding Dashboard
